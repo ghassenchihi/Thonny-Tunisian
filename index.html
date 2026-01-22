@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunisian Thonny Pack - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="indexStyles.css">
+    <link rel="icon" href="resources/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-brands fa-python"></i> Thonny Tunisia
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" style="color: var(--primary-color);">Home</a>
+                <a href="instructions.html">Instructions</a>
+                <a href="editor.html" class="btn-nav-code"><i class="fa-solid fa-code"></i> Code Online</a>
+                <button class="btn-icon" onclick="toggleTheme()" title="Toggle Theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <main>
+            <section class="content-section" style="text-align: center; border-top: 5px solid var(--accent-color);">
+                <h1>Tunisian Thonny Development Pack</h1>
+                <p>The complete educational solution featuring the localized Tunisian version of Thonny, bundled with Qt5 libraries and the official Tunisia Schools plugin.</p>
+            </section>
+
+            <section class="content-section">
+                <div class="download-card">
+                    <h2><i class="fa-solid fa-box-open"></i> Get the Full Pack</h2>
+                    <p>Includes Thonny IDE, Qt5 Framework, and Tunisian language localization.</p>
+                    <a href="https://github.com/ghassenchihi/Thonny-Tunisian/releases/download/v1.0-tunisia/thonnyTN-3.7.6x86-0.0.10.3.exe" download="thonnyTN-3.7.6x86-0.0.10.exe" class="btn-download">
+                        <i class="fa-solid fa-download"></i> Install / Download
+                    </a>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: #e0e0e0;">Filename: thonnyTN-3.7.6x86-0.0.10</p>
+                </div>
+
+                <h3>Individual Components</h3>
+                <ul style="margin-top: 1rem;">
+                    <li style="margin-bottom: 0.5rem;"><i class="fa-brands fa-python"></i> <strong>Thonny Tunisian Version:</strong> The main IDE translated for students.</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fa-brands fa-qt"></i> <strong>Qt5 Libraries:</strong> Essential for creating graphical user interfaces.</li>
+                    <li style="margin-bottom: 0.5rem;"><i class="fa-solid fa-plug"></i> <strong>thonny-tunisiaschools Plugin:</strong> Tools and templates specifically for the national curriculum.</li>
+                </ul>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="ad-placeholder ad-vertical">
+                <i class="fa-brands fa-google fa-3x"></i>
+                <p style="margin-top: 10px;">Google Ads Space</p>
+                <small>160x600 (Skyscraper)</small>
+            </div>
+            <div class="ad-placeholder ad-square">
+                <i class="fa-brands fa-google fa-2x"></i>
+                <p style="margin-top: 10px;">Google Ads Space</p>
+                <small>300x250</small>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tunisian Schools Thonny Pack. All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+<script src="themeChanger.js"></script>
+
+</html>

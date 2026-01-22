@@ -1,0 +1,246 @@
+/* --- CSS VARIABLES --- */
+
+ :root {
+    /* Light Mode (Classic) */
+    --primary-color: #0056b3;
+    --secondary-color: #f0f4f8;
+    --accent-color: #e67e22;
+    --text-color: #333;
+    --text-light: #666;
+    --white: #ffffff;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --header-bg: var(--white);
+    --header-text: #333;
+    --card-bg: var(--white);
+    --border-color: #ddd;
+}
+
+body.dark-mode {
+    /* Dark Mode (Classic Dark) */
+    --secondary-color: #121212;
+    --white: #1e1e1e;
+    --text-color: #e0e0e0;
+    --text-light: #a0a0a0;
+    --header-bg: #1e1e1e;
+    --header-text: #fff;
+    --card-bg: #252526;
+    --border-color: #3e3e42;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: var(--header-bg);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: color 0.3s;
+    color: var(--header-text);
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav-code {
+    background-color: var(--primary-color);
+    color: var(--white) !important;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+.btn-icon {
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    color: var(--header-text);
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+body.dark-mode .btn-icon {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-icon:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(15deg);
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+.content-section {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: background 0.3s;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.download-card {
+    background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.download-card h2 {
+    color: var(--white);
+}
+
+.download-card p {
+    color: #e0e0e0;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: transform 0.2s;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-download:hover {
+    transform: translateY(-2px);
+    background-color: #d35400;
+}
+
+.sidebar {}
+
+.ad-placeholder {
+    background-color: #e9ecef;
+    border: 2px dashed #ced4da;
+    color: #6c757d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 100px;
+    transition: background 0.3s;
+}
+
+body.dark-mode .ad-placeholder {
+    background-color: #252526;
+    border-color: #3e3e42;
+    color: #888;
+}
+
+.ad-vertical {
+    width: 100%;
+    height: 600px;
+}
+
+.ad-square {
+    width: 100%;
+    height: 250px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    .ad-placeholder {
+        position: static;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions - Tunisian Thonny Pack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="instructionsStyles.css">
+    <link rel="icon" href="resources/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-brands fa-python"></i> Thonny Tunisia
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="instructions.html" style="color: var(--primary-color);">Instructions</a>
+                <a href="editor.html" class="btn-nav-code"><i class="fa-solid fa-code"></i> Code Online</a>
+                <button class="btn-icon" onclick="toggleTheme()" title="Toggle Theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <main>
+            <section class="content-section">
+                <h1><i class="fa-solid fa-list-ol"></i> Installation Instructions</h1>
+                <p>Follow these steps to set up the Tunisian Thonny Pack with Qt5 and the schools plugin correctly.</p>
+
+                <div class="step-list" style="margin-top: 2rem;">
+                    <div class="step-item">
+                        <h4>Download the Pack</h4>
+                        <p>Go to the <strong>Home</strong> page and click the download button to get the installer containing both Thonny and Qt5 dependencies.</p>
+                    </div>
+                    <div class="step-item">
+                        <h4>Install Thonny</h4>
+                        <p>Run the installer. Choose "Standard Installation". Ensure the path is easy to find (e.g., C:\Program Files\Thonny).</p>
+                    </div>
+                    <div class="step-item">
+                        <h4>Install the Plugin</h4>
+                        <p>Open Thonny. Go to top menu: <strong>Tools > Manage Plugins...</strong>.</p>
+                        <p>In the "Search" box, type <code>thonny-tunisiaschools</code> and click <strong>Install</strong>.</p>
+                        <p style="margin-top:5px;">Alternatively, open the Shell (bottom of Thonny) and run this command:</p>
+                        <div style="background:#2d2d2d; color:#4ec9b0; padding:10px; border-radius:5px; font-family:monospace; margin-top:5px;">
+                            pip install thonny-tunisiaschools
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <h4>Configure Qt5</h4>
+                        <p>Go to <strong>Tools > Options > Interpreter</strong>. Verify that the backend is using the Python 3 version bundled with the pack, which includes the Qt5 libraries.</p>
+                    </div>
+                    <div class="step-item">
+                        <h4>Verification</h4>
+                        <p>Open a new file, import PyQt5, and write a small 'Hello World' program. If it runs without errors, your setup is complete.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="ad-placeholder ad-vertical">
+                <i class="fa-brands fa-google fa-3x"></i>
+                <p style="margin-top: 10px;">Google Ads Space</p>
+                <small>160x600 (Skyscraper)</small>
+            </div>
+            <div class="ad-placeholder ad-square">
+                <i class="fa-brands fa-google fa-2x"></i>
+                <p style="margin-top: 10px;">Google Ads Space</p>
+                <small>300x250</small>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tunisian Schools Thonny Pack. All Rights Reserved.</p>
+    </footer>
+</body>
+<script src="themeChanger.js"></script>
+
+</html>
