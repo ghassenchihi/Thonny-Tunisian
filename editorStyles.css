@@ -3,6 +3,7 @@
  :root {
     --primary-color: #0056b3;
     --bg-body: #f0f2f5;
+    --accent-color: #e67e22;
     --text-main: #333;
     --header-bg: #333;
     --header-text: #fff;
@@ -53,7 +54,7 @@ header {
 }
 
 .brand i {
-    color: #f39c12;
+    color: #0056b3;
 }
 
 .header-actions {
