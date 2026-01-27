@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9430858702213378" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Tunisian Thonny Pack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="resources/icon.png" type="image/x-icon">
+    <meta name="description" content="Contact the Tunisian Thonny Pack support team. Get help with installation, report bugs, or ask questions.">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-brands fa-python"></i> Thonny Tunisia
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="instructions.html">Instructions</a>
+
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn">Legal <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="disclaimer.html">Disclaimer</a>
+                    </div>
+                </div>
+                <a href="editor.html" class="btn-nav-code"><i class="fa-solid fa-code"></i> Code Online</a>
+                <button class="btn-icon" onclick="toggleTheme()" title="Toggle Theme">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <main>
+            <div class="content-card">
+                <h1>Contact Us</h1>
+                <p>We value your feedback, questions, and suggestions. Whether you are a student facing a bug, a teacher looking for bulk installation instructions, or a developer wishing to contribute to the project, we are here to assist you. Given the
+                    volume of inquiries we receive, please read through the relevant sections below before reaching out.</p>
+
+                <h2>Get in Touch</h2>
+                <p>The most direct way to reach us is via email. We strive to answer all technical support inquiries within 24-48 hours. When reporting a bug, please include as much detail as possible, including your Windows version and screenshots of the
+                    error.
+                </p>
+
+                <div style="background: var(--secondary-color); padding: 1.5rem; border-left: 4px solid var(--primary-color); margin-bottom: 2rem;">
+                    <h3><i class="fa-regular fa-envelope"></i> Email Support</h3>
+                    <p style="margin-bottom: 0.5rem;"><strong>General Inquiries & Support:</strong> <a href="mailto:bob719626@gmail.com" style="color: var(--primary-color); font-weight: bold;">bob719626@gmail.com</a></p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0;">Please use "Thonny Support" in the subject line for faster filtering.</p>
+                </div>
+
+                <h2>Send us a Message</h2>
+                <p>You can use the form below to contact us directly. This form is intended for non-emergency inquiries, feedback on the website, or partnership proposals.</p>
+
+                <form onsubmit="event.preventDefault(); alert('Thank you! This is a demo form.');" style="margin-top: 1.5rem;">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="What is this regarding?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                </form>
+
+                <h2>Frequently Asked Questions (FAQ)</h2>
+                <p>Before emailing, please check if your question is answered here:</p>
+                <ul class="styled-list">
+                    <li><strong>Is the software free?</strong> Yes, this software is 100% free for all students and teachers in Tunisia.</li>
+                    <li><strong>Does it work on Mac/Linux?</strong> Currently, the Tunisian Pack is optimized for Windows environments found in most schools, though standard Thonny works on all platforms.</li>
+                    <li><strong>How do I report a virus?</strong> We scan all releases. If your antivirus flags it, it is likely a false positive due to the installer script. Please email us to verify.</li>
+                </ul>
+            </div>
+        </main>
+
+        <aside class="sidebar">
+            <div class="ad-placeholder ad-vertical">
+                <i class="fa-brands fa-google fa-3x"></i>
+                <p style="margin-top: 10px;">Google Ads Space</p>
+                <small>160x600</small>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Tunisian Schools Thonny Pack. All Rights Reserved.</p>
+    </footer>
+
+    <script src="themeChanger.js"></script>
+</body>
+
+</html>

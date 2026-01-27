@@ -1,12 +1,12 @@
 /* --- CSS VARIABLES --- */
 
- :root {
+:root {
     /* Light Mode (Classic) */
     --primary-color: #0056b3;
     --secondary-color: #f0f4f8;
     --accent-color: #e67e22;
     --text-color: #333;
-    --text-light: #666;
+    --text-light: #555;
     --white: #ffffff;
     --border-radius: 8px;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -14,6 +14,7 @@
     --header-text: #333;
     --card-bg: var(--white);
     --border-color: #ddd;
+    --nav-active: #eef5ff;
 }
 
 body.dark-mode {
@@ -21,12 +22,13 @@ body.dark-mode {
     --secondary-color: #121212;
     --white: #1e1e1e;
     --text-color: #e0e0e0;
-    --text-light: #a0a0a0;
+    --text-light: #b0b0b0;
     --header-bg: #1e1e1e;
     --header-text: #fff;
     --card-bg: #252526;
     --border-color: #3e3e42;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --nav-active: #2c2c2c;
 }
 
 * {
@@ -36,8 +38,8 @@ body.dark-mode {
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
     color: var(--text-color);
     background-color: var(--secondary-color);
     transition: background 0.3s, color 0.3s;
@@ -176,6 +178,9 @@ header {
     /* Show dropdown on hover */
 }
 
+
+/* --- THEME TOGGLE --- */
+
 .btn-icon {
     background: rgba(0, 0, 0, 0.05);
     border: none;
@@ -189,6 +194,7 @@ header {
     align-items: center;
     justify-content: center;
     transition: 0.3s;
+    margin-left: 10px;
 }
 
 body.dark-mode .btn-icon {
@@ -200,6 +206,9 @@ body.dark-mode .btn-icon {
     transform: rotate(15deg);
 }
 
+
+/* --- MAIN LAYOUT --- */
+
 .main-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -207,68 +216,111 @@ body.dark-mode .btn-icon {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 2rem;
+    min-height: 80vh;
 }
 
-.content-section {
+.content-card {
     background: var(--card-bg);
     border-radius: var(--border-radius);
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 2.5rem;
     box-shadow: var(--shadow);
     border: 1px solid var(--border-color);
-    transition: background 0.3s;
 }
 
-h1,
-h2,
-h3 {
+h1 {
     color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--text-color);
+    margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: var(--text-light);
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
 }
 
 p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-light);
+    text-align: justify;
+}
+
+ul.styled-list {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
     color: var(--text-light);
 }
 
-.download-card {
-    background: linear-gradient(135deg, #0056b3 0%, #004494 100%);
-    color: var(--white);
-    padding: 2rem;
+ul.styled-list li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- CONTACT FORM --- */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     border-radius: var(--border-radius);
-    text-align: center;
-    margin-bottom: 2rem;
+    font-family: inherit;
 }
 
-.download-card h2 {
-    color: var(--white);
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: transparent;
 }
 
-.download-card p {
-    color: #e0e0e0;
-}
-
-.btn-download {
-    display: inline-block;
-    background-color: var(--accent-color);
+.btn-submit {
+    background-color: var(--primary-color);
     color: var(--white);
     padding: 0.8rem 2rem;
-    font-size: 1.1rem;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-top: 1rem;
-    transition: transform 0.2s;
     border: none;
+    border-radius: var(--border-radius);
     cursor: pointer;
-    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn-download:hover {
-    transform: translateY(-2px);
-    background-color: #d35400;
+.btn-submit:hover {
+    background-color: #004494;
 }
 
-.sidebar {}
+
+/* --- SIDEBAR ADS --- */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
 .ad-placeholder {
     background-color: #e9ecef;
@@ -280,9 +332,6 @@ p {
     align-items: center;
     text-align: center;
     border-radius: var(--border-radius);
-    margin-bottom: 2rem;
-    position: sticky;
-    top: 100px;
     transition: background 0.3s;
 }
 
@@ -295,6 +344,8 @@ body.dark-mode .ad-placeholder {
 .ad-vertical {
     width: 100%;
     height: 600px;
+    position: sticky;
+    top: 100px;
 }
 
 .ad-square {
@@ -302,19 +353,61 @@ body.dark-mode .ad-placeholder {
     height: 250px;
 }
 
+
+/* --- FOOTER --- */
+
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #1a1a1a;
+    color: #ccc;
     text-align: center;
     padding: 2rem;
     margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
 }
 
-@media (max-width: 768px) {
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 900px) {
     .main-container {
         grid-template-columns: 1fr;
     }
-    .ad-placeholder {
+    .ad-vertical {
+        display: none;
+    }
+    .nav-links {
+        gap: 5px;
+    }
+    .nav-links a,
+    .nav-links .dropbtn {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .dropdown-content {
         position: static;
+        /* On mobile, just show it normally or stack */
+        box-shadow: none;
+        border: none;
+        background: var(--secondary-color);
+        display: none;
+        /* JS or CSS logic needed for mobile tap */
+    }
+    /* Show dropdown on hover for desktop, but for mobile simplicity in this CSS-only approach:
+       We rely on hover or tap expanding the parent */
+    .dropdown:hover .dropdown-content {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
 }

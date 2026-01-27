@@ -64,14 +64,14 @@ header {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: var(--primary-color);
     display: flex;
@@ -81,25 +81,96 @@ header {
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    /* Reduced gap for tighter menu */
     align-items: center;
 }
 
-.nav-links a {
+
+/* Nav Links Styling */
+
+.nav-links a,
+.nav-links .dropbtn {
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s, background 0.3s;
     color: var(--header-text);
+    padding: 0.6rem 1rem;
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    cursor: pointer;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links .dropbtn:hover,
+.nav-links a.active {
     color: var(--primary-color);
+    background-color: var(--nav-active);
 }
+
+
+/* Code Online Button Styling */
 
 .btn-nav-code {
     background-color: var(--primary-color);
     color: var(--white) !important;
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem !important;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.btn-nav-code:hover {
+    transform: translateY(-2px);
+    background-color: #004494 !important;
+}
+
+
+/* --- DROPDOWN MENU SOLUTION --- */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-family: inherit;
+    color: var(--header-text);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    /* Aligns dropdown to the right edge of the button */
+    background-color: var(--card-bg);
+    min-width: 200px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
+    z-index: 1;
+    padding: 0.5rem 0;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    border-radius: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    /* Show dropdown on hover */
 }
 
 .btn-icon {
